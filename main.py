@@ -6,43 +6,43 @@
 from jokes2 import finished, robbers, tanks, pencils
 
 
-def get_joke():
-    joke_types = [robbers, tanks, "pencils" ]
+def get_joke(): # Function gets the type of joke that the user wants to hear
+    joke_types = [robbers, tanks, "pencils" ] #list of jokes available
 
-    question = input("Do you want to hear a joke about robbers, tanks, or pencils? ")
+    question = input("Do you want to hear a joke about robbers, tanks, or pencils? ") # Allows user to input if they want to hear a robber, tank, or pencil joke
     if question == "robbers":
-            robbers()
+            robbers() # Will run if user wanted to hear a joke about robbers
     
     elif question == "tanks":
-            tanks()
+            tanks() #will run the dialouge for tanks joke
 
     elif question == "pencils":
-        pencils()
+        pencils() #will run the dialouge for pencils joke
 
 
-def want_jokes():
+def want_jokes(): # Function asks user if they want to hear a joke
     joke = input("Do you want to hear a joke? ")
-    if joke == "no":
-        print("Okay suit yourself!")
-    elif joke == "yes":
+    if joke == "no": # If user didn't want to hear the joke, this will print and the code will end
+        print("Okay suit yourself!") 
+    elif joke == "yes":# If user wanted to hear joke, will run the get_joke() function defined above
         print("Great, Let's Play")
         get_joke()
 
 
 
 
-def multi_jokes(**jokes):
+def multi_jokes(**jokes): #function runs the whole game
     
 
-    want_jokes()
-    if jokes == "yes":
+    want_jokes() 
+    if jokes == "yes": # If statement runs different functions based off of user's answer of yes or no
         get_joke()
     elif jokes == "finished":
-        finished()
+        finished() 
         
     
     
-multi_jokes()
+multi_jokes() # calls function to run
 
     #     question = input("Do you want to hear a joke about robbers, tanks, or pencils? ")
     #     if question == "robbers":
