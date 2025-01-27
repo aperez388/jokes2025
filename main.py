@@ -74,9 +74,9 @@ def multi_jokes(**jokes): #function runs the whole game
 
 
     want_jokes()
-    if jokes == "yes": # If statement runs different functions based off of user's answer of yes or no
+    while jokes == "yes": # If statement runs different functions based off of user's answer of yes or no
         get_joke()
-    elif jokes == "finished":
+    if jokes == "finished":
         finished()
        
 multi_jokes() # calls function to run
